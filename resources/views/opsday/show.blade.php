@@ -90,8 +90,13 @@ THE SOFTWARE.
 
         @if ($display == "since")
             <script>
-                    $('#day').hide();
-                    $('#since').show();
+                $('#day').hide();
+                $('#since').show();
+            </script>
+        @else
+            <script>
+                $('#day').show();
+                $('#since').hide();
             </script>
         @endif
 
