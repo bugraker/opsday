@@ -77,7 +77,7 @@ class OpsDayController extends Controller {
                 'start' => null,
                 'target' => null,
                 'op' => "OPSDAY",
-                'usesince' => null,
+                'display' => null,
                 'set' => null
             ];
         }
@@ -134,9 +134,9 @@ class OpsDayController extends Controller {
                     'start' => $cookie['start'],
                     'target' => $cookie['target'],
                     'op' => (!empty($cookie['op']) ? $cookie['op'] : null),
-                    'display' => $cookie['display']
+                    'display' => (!empty($cookie['display']) ? $cookie['display'] : 'opsday')
                 ];
-                //dd($opsday);
+                
                 return view('opsday.calendar', $opsday);
             }
         }
